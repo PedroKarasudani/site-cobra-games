@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
+/* Resetando margens e preenchimentos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Estilos globais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Contêiner principal */
+.app-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* Overlay com fundo animado */
+.overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #ff0000, #000);
+  background-size: 400% 400%;
+  animation: gradientAnimation 5s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Animação do gradiente de fundo */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Conteúdo centralizado */
+.content {
+  z-index: 2;
+  max-width: 800px; /* Limita a largura máxima do conteúdo */
+  width: 100%;
+  padding: 20px;
+}
+
+.content div {
+  padding: 10px;
+}
+
+img {
+  display: block;
+  margin: 15px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.countdown-item {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+}
+
+.countdown-item span {
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* Redes sociais */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-icon {
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .countdown {
+    display: none;
+  }
+  .h1 {
+    font-size: 2rem; /* Ajuste o tamanho do título */
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .countdown {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .countdown-item {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+
+  .social-links {
+    gap: 15px;
+  }
+
+  .social-icon {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem; /* Ajuste maior para dispositivos menores */
+  }
+
+  .p {
+    font-size: 1.2rem;
+  }
+
+  .countdown-item span {
+    font-size: 1.5rem;
+  }
+
+  .social-icon {
+    font-size: 1.8rem;
   }
 }
