@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaInstagram, FaYoutube, FaEnvelope, FaTwitter, FaLinkedin, FaCloud, FaTiktok } from 'react-icons/fa';
+import { FaInstagram, FaYoutube, FaEnvelope, FaXTwitter, FaLinkedin, FaBluesky, FaTiktok } from 'react-icons/fa6';
 import Countdown from 'react-countdown';
 import './App.css';
 import minhaImagem from './assets/logo.png';
@@ -34,7 +34,7 @@ function App() {
           <Countdown date={new Date('2025-06-01T00:00:00')} renderer={renderer}/>
           <div className="social-links">
             <a href="https://x.com/coralcobragames" target="_blank" rel="noopener noreferrer">
-              <FaTwitter size={40} className="social-icon" />
+              <FaXTwitter size={40} className="social-icon" />
             </a>
             <a href="https://www.instagram.com/coralcobragames" target="_blank" rel="noopener noreferrer">
               <FaInstagram size={40} className="social-icon" />
@@ -49,7 +49,7 @@ function App() {
               <FaYoutube size={40} className="social-icon" />
             </a>
             <a href="https://bsky.app/profile/coralcobragames.bsky.social" target="_blank" rel="noopener noreferrer">
-              <FaCloud size={40} className="social-icon" />
+              <FaBluesky size={40} className="social-icon" />
             </a>
             <a href="mailto:contato@coralcobragames.com" target="_blank" rel="noopener noreferrer">
               <FaEnvelope size={40} className="social-icon" />
