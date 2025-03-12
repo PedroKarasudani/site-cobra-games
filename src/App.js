@@ -30,7 +30,15 @@ function App() {
       <img src={minhaImagem} alt="Logo da Coral Cobra Games" width="450" />
       <div className="overlay">
         <div className="content">
-          <div><h1>Em breve estaremos de volta!</h1></div>
+          <iframe id="youtube-player" width="560" height="315" 
+            src="https://www.youtube.com/embed/X2GarMIqTrI?autoplay=0&mute=0" 
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+          </iframe>
+          <div>
+            <h1>Em breve estaremos de volta!</h1>
+          </div>
           <Countdown date={new Date('2025-06-01T00:00:00')} renderer={renderer}/>
           <div className="social-links">
             <a href="https://x.com/coralcobragames" target="_blank" rel="noopener noreferrer">
