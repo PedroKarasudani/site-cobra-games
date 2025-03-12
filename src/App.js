@@ -30,12 +30,14 @@ function App() {
       <img src={minhaImagem} alt="Logo da Coral Cobra Games" width="450" />
       <div className="overlay">
         <div className="content">
-          <iframe id="youtube-player" width="560" height="315" 
-            src="https://www.youtube.com/embed/X2GarMIqTrI?autoplay=0&mute=0" 
-            frameborder="0" 
-            allow="autoplay; encrypted-media" 
-            allowfullscreen>
-          </iframe>
+          <div class="video-container">
+            <iframe id="youtube-player" width="560" height="315" 
+              src="https://www.youtube.com/embed/X2GarMIqTrI?autoplay=0&showinfo=0&rel=0&iv_load_policy=3&fs=0&disablekb=1&mute=0" 
+              frameborder="0" 
+              allow="autoplay; encrypted-media" 
+              allowfullscreen>
+            </iframe>
+          </div>
           <div>
             <h1>Em breve estaremos de volta!</h1>
           </div>
@@ -65,6 +67,9 @@ function App() {
           </div>
         </div>
       </div>
+      <footer class="footer">
+        &copy; 2025 Coral Cobra Games. Todos os direitos reservados.
+      </footer>
     </div>
   );
 }
